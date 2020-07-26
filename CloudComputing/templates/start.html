@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block time %}
+    <div class="timer">{{ date }}</div>
+{% endblock %}
+
+{% block content %}
+    <form method="get">
+        <label for="date">Date: </label>
+        <input type="text" name="date" id="date" placeholder="2020-07-24 07:50:35"/>
+
+        <label for="toDo">ToDo:</label>
+        <input type="text" name="toDo" id="toDo" placeholder="Cloud Computing"/>
+
+        <label for="category1">Category1:</label>
+        <input type="text" name="category1" id="category1" placeholder="DHBW"/>
+
+        <label for="category2">Category2:</label>
+        <input type="text" name="category2" id="category2" placeholder="School"/>
+
+        <label for="category3">Category3:</label>
+        <input type="text" name="category3" id="category3" placeholder="Freetime"/>
+
+        <br />
+
+        <input type="submit" value="Formular abschicken!"/>
+
+        <br/>
+        <input type="button" value="Zurück zur Tabelle" onclick="location.href='/output'">
+    </form>
+{% endblock %}

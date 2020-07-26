@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block time %}
+    <div class="timer">{{ date }}</div>
+{% endblock %}
+
+{% block content %}
+
+    <form method="get">
+        <input type="button" value="New" onclick="location.href='/'">
+    </form>
+
+    <div class="row">
+        <div class="six columns">
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>ToDo</th>
+                        <th>Category1</th>
+                        <th>Category2</th>
+                        <th>Category3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(lenght) %}
+                        <tr id="{{ key_tuple[i][5] }}">
+                            <td>{{ key_tuple[i][0] }}</td>
+                            <td>{{ key_tuple[i][1] }}</td>
+                            <td bgcolor="{{ key_tuple[i][2] }}"></td>
+                            <td bgcolor="{{ key_tuple[i][3] }}"></td>
+                            <td bgcolor="{{ key_tuple[i][4] }}"></td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <div class="three columns">
+            <table class="u-pull-right">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(lenghtCategory) %}
+                        <tr>
+                            <td>{{ category[i][0] }}</td>
+                            <td bgcolor="{{ category[i][1] }}"></td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

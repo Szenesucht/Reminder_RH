@@ -1,0 +1,23 @@
+.navigation {
+    list-style-type: none;
+}
+
+.reload{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.timer{
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#zeit{
+
+}
+
+#abgelaufen{
+    color: red;
+}
